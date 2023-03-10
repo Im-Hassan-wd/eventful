@@ -1,8 +1,8 @@
 <template>
   <Nav :login="login" />
 
-  <div class="px-12 my-10">
-    <div class="flex justify-between">
+  <div class="md:px-4 lg:px-12">
+    <div class="flex justify-between items-center my-12">
       <div class="">
         <h1 class="text-black text-2xl mb-1 font-semibold">Welcome John Doe,</h1>
         <p>Here are items in your eventful moment bucket.</p>
@@ -13,7 +13,7 @@
     <!-- cards -->
     <div class="mt-8 grid lg:grid-cols-2 gap-10">
       <!-- card -->
-      <div class="shadow p-5 rounded">
+      <div v-for="para in paras" :key="para.id" class="shadow p-5 rounded">
         <h4 class="font-bold text-base mb-1 leading-5">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero’s 1st-century BC text De Finibus Bonorum et Malorum.</h4>
         <p class="mb-1 text-sm">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It’s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real. Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It’s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.</p>
         <div class="mt-4">
@@ -35,8 +35,28 @@ export default {
   },
   data() {
     return {
-      login: true
+      login: true,
+      paras: [
+        {
+          id: 1,
+        },
+        {
+          id: 2,
+        },
+        {
+          id: 3,
+        },
+        {
+          id: 4,
+        },
+      ]
     }
   }
 }
 </script>
+
+<style>
+#app > div > div > div.mt-8.grid.lg\:grid-cols-2.gap-10 > div:nth-child(1) {
+  background: #FFF5A7;
+}
+</style>
