@@ -1,5 +1,7 @@
 <template>
-  <router-view/>
+  <div class="font-body">
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -11,7 +13,3 @@ export default {
   components: { Nav, },
 }
 </script>
-
-<style>
-
-</style>
