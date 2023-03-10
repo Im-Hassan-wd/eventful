@@ -3,16 +3,16 @@
     <h1 class="italic font-bold">Eventful Moments.</h1>
 
     <ul class="">
-      <span class="font-sm">
+      <span class="text-sm">
         <router-link v-if="!login" :to="{ name: 'Login'}">Login</router-link>
       </span>
-      <span class="font-sm">
+      <span class="text-sm">
         <router-link v-if="login" to="#">Logout</router-link>
       </span>
-      <span class="font-sm">
+      <span class="text-sm">
         <router-link v-if="!login" to="#">Register</router-link>
       </span>
-      <span class="font-sm">
+      <span class="text-sm">
         <router-link v-if="login" to="#">My Bucket</router-link>
       </span>
     </ul>
