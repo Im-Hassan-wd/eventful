@@ -1,10 +1,19 @@
 <template>
-  <h1>Create</h1>
+<Nav :login="login" />
 </template>
 
 <script>
-export default {
+import Nav from '../components/Nav'
 
+export default {
+  components: {
+    Nav
+  },
+  data() {
+    return {
+      login: true
+    }
+  }
 }
 </script>
 

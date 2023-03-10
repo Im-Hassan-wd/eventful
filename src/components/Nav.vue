@@ -3,9 +3,17 @@
     <h1 class="italic font-bold">Eventful Moments.</h1>
 
     <ul class="">
-      <span>
-        <router-link to="/">Login</router-link>
-        <router-link to="/">Logout</router-link>
+      <span class="font-sm">
+        <router-link v-if="!login" :to="{ name: 'Login'}">Login</router-link>
+      </span>
+      <span class="font-sm">
+        <router-link v-if="login" to="#">Logout</router-link>
+      </span>
+      <span class="font-sm">
+        <router-link v-if="!login" to="#">Register</router-link>
+      </span>
+      <span class="font-sm">
+        <router-link v-if="login" to="#">My Bucket</router-link>
       </span>
     </ul>
   </nav>
@@ -13,6 +21,7 @@
 
 <script>
 export default {
+ props: ['login']
 }
 </script>
 

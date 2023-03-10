@@ -1,12 +1,19 @@
 <template>
-  <h1 className="text-3xl underline">
-    Hello world!
-  </h1>
+  <Nav :login="login" />
 </template>
 
 <script>
-export default {
+import Nav from '../components/Nav'
 
+export default {
+  components: {
+    Nav
+  },
+  data() {
+    return {
+      login: true
+    }
+  }
 }
 </script>
 
