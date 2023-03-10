@@ -17,8 +17,8 @@
       <input class="border w-96 rounded-md p-1" type="password">
     </div>
 
-    <div class="">
-      <button class="bg-secondary py-2 px-3 w-36 rounded text-sm">Create</button>
+    <div class="text-center mt-8">
+      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">Create</button>
     </div>
   </form>
 </template>

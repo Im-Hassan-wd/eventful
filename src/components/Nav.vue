@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-teal-600 p-3 px-6 text-white">
+  <nav class="flex justify-between bg-teal-600 p-3 px-6 text-white">
     <h1 class="italic font-bold">Eventful Moments.</h1>
 
     <ul class="">
