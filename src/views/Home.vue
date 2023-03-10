@@ -1,5 +1,28 @@
 <template>
   <Nav :login="login" />
+
+  <div class="px-12 my-10">
+    <div class="flex justify-between">
+      <div class="">
+        <h1 class="text-black text-2xl mb-1 font-semibold">Welcome John Doe,</h1>
+        <p>Here are items in your eventful moment bucket.</p>
+      </div>
+      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">Add Item</button>
+    </div>
+
+    <!-- cards -->
+    <div class="mt-8">
+      <div class="shadow p-5 rounded">
+        <h4 class="font-bold text-base mb-1">Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero’s 1st-century BC text De Finibus Bonorum et Malorum.</h4>
+        <p class="mb-1">Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It’s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real. Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It’s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.</p>
+        <div class="mt-4">
+          <small class="text-secondary">View Details</small>
+          <small class="text-gray-500">10/03/2023</small>
+          <small>10/03/2023</small>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -16,7 +39,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>
