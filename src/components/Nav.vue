@@ -7,10 +7,10 @@
         <router-link v-if="!login" :to="{ name: 'Login'}">Login</router-link>
       </span>
       <span class="text-sm pl-3">
-        <router-link v-if="login" to="#">Logout</router-link>
+        <router-link v-if="login" :to="{ name: 'Login'}">Logout</router-link>
       </span>
       <span class="text-sm pl-3">
-        <router-link v-if="!login" to="/register">Register</router-link>
+        <router-link v-if="!login" :to="{ name: 'Register'}">Register</router-link>
       </span>
       <span class="text-sm pl-3">
         <router-link v-if="login" to="#">My Bucket</router-link>

@@ -1,6 +1,23 @@
 <template>
   <Nav :login="login" />
-  <h1>Login</h1>
+
+  <form class="max-w-md mx-auto mt-16 p-8">
+    <h1 class="text-black text-2xl font-semibold">Welcome back,</h1>
+    <p class="my-4">Hi, my name is Eventful Moments, I am a bucket… no, not the bucket of water but I store awesome moments you will like to have in coming years.</p>
+
+    <div class="mb-4">
+      <label class="text-sm block">Email</label>
+      <input class="border w-96 rounded-md p-1" type="email">
+    </div>
+    <div class="mb-4">
+      <label class="text-sm block">Password</label>
+      <input class="border w-96 rounded-md p-1" type="password">
+    </div>
+
+    <div class="text-center mt-8">
+      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">Create</button>
+    </div>
+  </form>
 </template>
 
 <script>

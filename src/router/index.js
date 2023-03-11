@@ -3,6 +3,7 @@ import Home from '../views/Home'
 import Login from '../views/Login'
 import Register from '../views/Register'
 import Create from '../views/Create'
+import Event from '../views/Event'
 
 const routes = [
   {
@@ -24,6 +25,12 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: Register
+  },
+  {
+    path: '/event/:id',
+    name: 'Event',
+    component: Event,
+    props: true
   },
 ]
 
