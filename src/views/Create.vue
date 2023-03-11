@@ -16,7 +16,7 @@
     </div>
 
     <div class="text-center mt-8">
-      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">Save</button>
+      <button class="btn bg-secondary">Save</button>
     </div>
   </form>
 </template>
