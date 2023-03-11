@@ -1,21 +1,24 @@
 <template>
   <Nav :login="login" />
 
-  <form class="max-w-md mx-auto mt-16 p-8">
+  <form class="max-w-md mx-auto mt-16 px-16">
     <h1 class="text-black text-2xl font-semibold">Welcome back,</h1>
     <p class="my-4">Hi, my name is Eventful Moments, I am a bucket… no, not the bucket of water but I store awesome moments you will like to have in coming years.</p>
 
     <div class="mb-4">
       <label class="text-sm block">Email</label>
-      <input class="border w-96 rounded-md p-1" type="email">
+      <input class="border w-96 rounded-md p-1" type="email" required />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Password</label>
-      <input class="border w-96 rounded-md p-1" type="password">
+      <input class="border w-96 rounded-md p-1" type="password" required />
     </div>
 
     <div class="text-center mt-8">
-      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">Create</button>
+      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">
+      <!-- link in a submit button is just to link to the home page. NOTE: bad practise -->
+      <router-link :to="{ name: 'Home'}">login</router-link>
+      </button>
     </div>
   </form>
 </template>

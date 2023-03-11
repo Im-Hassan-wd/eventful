@@ -1,7 +1,7 @@
 <template>
   <Nav :login="login" />
 
-  <form class="max-w-md mt-8 p-8">
+  <form class="max-w-md mt-8 px-16">
     <div class="mb-4">
       <label class="text-sm block">Date in the future</label>
       <input class="border w-96 rounded-md p-1" type="text">

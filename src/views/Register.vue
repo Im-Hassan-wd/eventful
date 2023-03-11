@@ -1,7 +1,7 @@
 <template>
   <Nav :login="login" />
   
-  <form class="max-w-md mx-auto mt-16 p-8">
+  <form class="max-w-md mx-auto mt-16 px-16">
     <h1 class="text-black text-2xl mb-6 font-semibold">Create an account,</h1>
 
     <div class="mb-4">
