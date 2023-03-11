@@ -2,8 +2,8 @@
   <Nav :login="login" />
 
   <div class="px-16">
-    <div class="flex justify-between items-center my-12">
-      <div class="">
+    <div class="md:flex justify-between items-center my-12">
+      <div class="mb-4">
         <h1 class="text-black text-2xl mb-1 font-semibold">Welcome John Doe,</h1>
         <p>Here are items in your eventful moment bucket.</p>
       </div>

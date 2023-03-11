@@ -7,11 +7,11 @@
 
     <div class="mb-4">
       <label class="text-sm block">Email</label>
-      <input class="border w-96 rounded-md p-1" type="email" required />
+      <input class="border w-full sm:w-96 rounded-md p-1" type="email" required />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Password</label>
-      <input class="border w-96 rounded-md p-1" type="password" required />
+      <input class="border w-full sm:w-96 rounded-md p-1" type="password" required />
     </div>
 
     <div class="text-center mt-8">

@@ -4,15 +4,15 @@
   <form class="max-w-md mt-8 px-16">
     <div class="mb-4">
       <label class="text-sm block">Date in the future</label>
-      <input class="border w-96 rounded-md p-1" type="text">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text">
     </div>
     <div class="mb-4">
       <label class="text-sm block">Title</label>
-      <input class="border w-96 rounded-md p-1" type="text">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text">
     </div>
     <div class="mb-4">
       <label class="text-sm block">Details</label>
-      <textarea class="border w-96 rounded-md p-1" name="" id="" cols="30" rows="8"></textarea>
+      <textarea class="border w-full sm:w-96 rounded-md p-1" name="" id="" cols="30" rows="8"></textarea>
     </div>
 
     <div class="text-center mt-8">

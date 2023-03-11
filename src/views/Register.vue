@@ -6,15 +6,15 @@
 
     <div class="mb-4">
       <label class="text-sm block">Full name</label>
-      <input class="border w-96 rounded-md p-1" type="text">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text">
     </div>
     <div class="mb-4">
       <label class="text-sm block">Email</label>
-      <input class="border w-96 rounded-md p-1" type="email">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="email">
     </div>
     <div class="mb-4">
       <label class="text-sm block">Password</label>
-      <input class="border w-96 rounded-md p-1" type="password">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="password">
     </div>
 
     <div class="text-center mt-8">
