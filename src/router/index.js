@@ -7,7 +7,7 @@ import Event from '../views/Event'
 
 const routes = [
   {
-    path: '/',
+    path: '/event',
     name: 'Home',
     component: Home
   },
@@ -32,6 +32,11 @@ const routes = [
     component: Event,
     props: true
   },
+  // redirect
+  {
+    path: '/',
+    redirect: '/event'
+  }
 ]
 
 const router = createRouter({
