@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex justify-between items-center column bg-teal-600 h-16 xs:px-4 lg:px-16 text-white">
+  <nav class="flex justify-between items-center column bg-teal-600 h-16 min-[100px]:px-4 md:px-16 text-white">
     <router-link :to="{ name: 'Home' }">
       <h1 class="italic font-bold">Eventful Moments.</h1>
     </router-link>
