@@ -1,4 +1,4 @@
-# task-tracker
+# Eventful Moments
 
 ## Project setup
 ```
