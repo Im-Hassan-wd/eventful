@@ -6,19 +6,22 @@
 
     <div class="mb-4">
       <label class="text-sm block">Full name</label>
-      <input class="border w-full sm:w-96 rounded-md p-1" type="text">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text" required />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Email</label>
-      <input class="border w-full sm:w-96 rounded-md p-1" type="email">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="email" required />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Password</label>
-      <input class="border w-full sm:w-96 rounded-md p-1" type="password">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="password" required />
     </div>
 
     <div class="text-center mt-8">
-      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">Create</button>
+      <button class="bg-secondary text-white py-2 px-3 w-36 rounded-md text-sm">
+      <!-- link in a submit button is just to link to the home page. NOTE: bad practise -->
+      <router-link :to="{ name: 'Home'}">Create</router-link>
+      </button>
     </div>
   </form>
 </template>
