@@ -7,7 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        secondary: '#5271FF'
+        secondary: '#5271FF',
+        info: '#06C3B4',
+        danger: '#C34F06',
+        active: '#FFF5A7',
       },
       fontFamily: {
         body: ['Poppins']
