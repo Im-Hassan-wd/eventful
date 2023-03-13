@@ -1,5 +1,5 @@
 <template>
-  <footer class="bg-footer flex justify-center text-sm items-end flex-col h-12 min-[100px]:px-4 md:px-16">
+  <footer class="bg-footer flex justify-center text-sm items-end flex-col h-12 min-[100px]:px-4 md:px-16 mt-24">
     <p>Eventful Moments by Hassan Warwick</p>
   </footer>
 </template>
