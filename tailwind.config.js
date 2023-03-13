@@ -12,6 +12,7 @@ module.exports = {
         info: '#06C3B4',
         danger: '#C34F06',
         active: '#FFF5A7',
+        footer: '#60ced4',
       },
       fontFamily: {
         body: ['Poppins']
