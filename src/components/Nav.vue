@@ -9,10 +9,10 @@
         <router-link v-if="!login" :to="{ name: 'Login' }">Login</router-link>
       </span>
       <span class="text-sm pl-3">
-        <router-link v-if="login" :to="{ name: 'Login' }">Logout</router-link>
+        <a v-if="login" href="javascript:void(0)">Logout</a>
       </span>
       <span class="text-sm pl-3">
-        <router-link v-if="!login" :to="{ name: 'Register' }">Register</router-link>
+        <router-link v-if="!login" @click="logout" :to="{ name: 'Register' }">Register</router-link>
       </span>
       <span class="text-sm pl-3">
         <router-link v-if="login" :to="{name: 'Home' }">My Bucket</router-link>
@@ -23,7 +23,12 @@
 
 <script>
 export default {
- props: ['login']
+ props: ['login'],
+ methods: {
+  logout() {
+    
+  }
+ }
 }
 </script>
 
