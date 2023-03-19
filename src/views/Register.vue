@@ -34,9 +34,9 @@ export default {
   components: { Error },
   data() {
     return {
-      fullname: 'Hassan Warwick',
-      email: 'warwick@google.com',
-      password: 'test123',
+      fullname: '',
+      email: '',
+      password: '',
       error: ''
     }
   },
