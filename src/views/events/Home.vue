@@ -1,5 +1,5 @@
 <template>
-  <Nav :login="login" />
+  <Nav :user="user" :login="login" />
 
   <div class="min-[100px]:px-4 md:px-16">
     <div class="md:flex justify-between items-center my-12">
@@ -44,7 +44,7 @@ export default {
     Nav
   },
   data() {
-    return {
+    return { 
       login: true,
       paras: [
         { id: 1 }, { id: 2}, { id: 3 }, { id: 4 },
@@ -55,7 +55,8 @@ export default {
   async created() {
     const res = await axios.get('me')
 
-    this.user = res.data 
+    // this.user = res.data 
+    console.log(res)
   }
 }
 </script>

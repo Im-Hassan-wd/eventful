@@ -1,14 +1,14 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/events/Home'
-import Event from '../views/events/Event'
-import CreateEvent from '../views/events/CreateEvent'
-import EditEvent from '../views/events/EditEvent'
+import Home from '../views/Home'
 import Login from '../views/Login'
 import Register from '../views/Register'
+import CreateEvent from '../views/CreateEvent'
+import Event from '../views/Event'
+import EditEvent from '../views/EditEvent'
 
 const routes = [
   {
-    path: '/event',
+    path: '/',
     name: 'Home',
     component: Home
   },
@@ -34,15 +34,11 @@ const routes = [
     props: true
   },
   {
-    path: '/edit-event/',
+    path: '/event/:id/edit',
     name: 'EditEvent',
     component: EditEvent,
+    props: true
   },
-  // redirect
-  {
-    path: '/',
-    redirect: '/event'
-  }
 ]
 
 const router = createRouter({
