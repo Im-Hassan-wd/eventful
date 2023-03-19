@@ -1,18 +1,16 @@
 <template>
-  <Nav :login="login" />
-
-  <form class="max-w-md mt-8 min-[100px]:px-4 md:px-16" >
+  <form @submit.prevent="handleEdit" class="max-w-md mt-8 min-[100px]:px-4 md:px-16 mb-24" >
     <div class="mb-4">
       <label class="text-sm block">Date in the future</label>
-      <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="date">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="futureDate" required />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Title</label>
-      <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="title">
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="title" required />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Details</label>
-      <textarea class="border w-full sm:w-96 rounded-md p-1" name="" id="" cols="30" rows="8" v-model="detail"></textarea>
+      <textarea class="border w-full sm:w-96 rounded-md p-1" name="" id="" cols="30" rows="8" v-model="details" required></textarea>
     </div>
 
     <div class="text-center mt-8">
@@ -22,23 +20,45 @@
 </template>
 
 <script>
-import Nav from '../../components/Nav'
+import axios from 'axios'
 
 export default {
-  components: {
-    Nav
-  },
+  name: 'EditEvent',
   data() {
     return {
-      login: true,
-      date: '20/07/2050',
-      title: 'Lorem ipsum began as scrambled, nonsensical Latin derived from Cicero’s 1st-century.',
-      detail: 'Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It’s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real. Until recently, the prevailing view assumed lorem ipsum was born as a nonsense text. “It’s not Latin, though it looks like it, and it actually says nothing,” Before & After magazine answered a curious reader, “Its ‘words’ loosely approximate the frequency with which letters occur in English, which is why at a glance it looks pretty real.'
+      futureDate: '',
+      title: '',
+      details: '',
+      id: ''
+    }
+  },
+  async created() {
+    this.id = this.$router.currentRoute._rawValue.params.id
+    try{
+        const response = await axios.get(`moment/${this.id}`)
+        this.title = response.data.data.title
+        this.details = response.data.data.details
+      } catch(err) {
+      console.log('An error occurred!')
+      }
+  },
+  methods: {
+    async handleEdit() {
+
+      try{
+        const response = await axios.patch(`moment/${this.id}`, {
+        title: this.title,
+        details: this.details,
+        futureDate: this.futureDate
+      })
+        this.$router.push('/')
+      } catch(err) {
+      console.log('An error occurred!')
+      }
+
+
     }
   }
+
 }
 </script>
-
-<style>
-
-</style>
