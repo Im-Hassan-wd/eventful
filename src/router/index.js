@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/events/Home'
+import Home from '../views/moments/Home'
 import Login from '../views/Login'
 import Register from '../views/Register'
-import CreateEvent from '../views/events/CreateEvent'
-import Event from '../views/events/Event'
-import EditEvent from '../views/events/EditEvent'
+import CreateMoment from '../views/moments/CreateMoment'
+import MomentDetails from '../views/moments/MomentDetails'
+import EditMoment from '../views/moments/EditMoment'
 
 const routes = [
   {
@@ -18,9 +18,9 @@ const routes = [
     component: Login
   },
   {
-    path: '/create-event',
-    name: 'CreateEvent',
-    component: CreateEvent
+    path: '/new-event',
+    name: 'CreateMoment',
+    component: CreateMoment
   },
   {
     path: '/register',
@@ -28,15 +28,15 @@ const routes = [
     component: Register
   },
   {
-    path: '/event/:id',
-    name: 'Event',
-    component: Event,
+    path: '/moment/:id',
+    name: 'MomentDetails',
+    component: MomentDetails,
     props: true
   },
   {
-    path: '/event/:id/edit',
-    name: 'EditEvent',
-    component: EditEvent,
+    path: '/moment/:id/edit',
+    name: 'EditMoment',
+    component: EditMoment,
     props: true
   },
 ]

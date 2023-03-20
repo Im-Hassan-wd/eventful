@@ -1,6 +1,6 @@
 <template>
   <div class="font-body text-base flex flex-col relative min-h-screen">
-    <Nav />
+    <Navbar />
     <router-view />
     <Footer />
   </div>
@@ -8,11 +8,11 @@
 
 <script>
 
-import Nav from "./components/Nav"
+import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
 export default {
   name: "App",
-  components: { Footer, Nav },
+  components: { Footer, Navbar },
 }
 </script>
 <style>

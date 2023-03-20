@@ -32,7 +32,7 @@
 import { mapGetters } from 'vuex'
 
 export default {
-  name: 'Nav',
+  name: 'Navbaer',
   methods: {
     handleLogout() {
 

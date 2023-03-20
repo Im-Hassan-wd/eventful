@@ -6,7 +6,7 @@
      {{ moment.details }}
     </p>
     <div class="text-center my-16 mb-24 flex">
-      <router-link :to="'/event/'+ moment._id + '/edit'">
+      <router-link :to="'/moment/'+ moment._id + '/edit'">
         <button class="btn bg-info mr-4">Edit</button>
       </router-link>
       
