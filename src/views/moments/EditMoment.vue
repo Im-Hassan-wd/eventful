@@ -51,7 +51,7 @@ export default {
         details: this.details,
         futureDate: this.futureDate
       })
-        this.$router.push('/')
+        this.$router.push(`/moment/${this.id}`)
       } catch(err) {
       console.log('An error occurred!')
       }

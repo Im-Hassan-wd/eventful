@@ -18,7 +18,7 @@ const routes = [
     component: Login
   },
   {
-    path: '/new-event',
+    path: '/new-moment',
     name: 'CreateMoment',
     component: CreateMoment
   },

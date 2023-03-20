@@ -6,7 +6,7 @@
         <h1 class="text-black text-2xl mb-1 font-semibold">Welcome {{ user.fullname }},</h1>
         <p>Here are items in your eventful moment bucket.</p>
       </div>
-      <router-link to="/create-event">
+      <router-link to="/new-moment">
         <button class="btn bg-secondary">Add Item</button>
       </router-link>
     </div>
