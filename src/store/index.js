@@ -32,7 +32,6 @@ const getUser = async () => {
   const response  = await axios.get('users/me')
   store.commit('setAuthIsReady', true)
   store.commit('user', response.data.data[0])
-  // console.log(response.data.data[0])
 }
 
 getUser()

@@ -3,7 +3,7 @@
   <div v-if="user" class="min-[100px]:px-4 md:px-16">
     <div class="md:flex justify-between items-center my-12">
       <div class="mb-4">
-        <h1 v-if="user" class="text-black text-2xl mb-1 font-semibold">Welcome {{ user.fullname }},</h1>
+        <h1 class="text-black text-2xl mb-1 font-semibold">Welcome {{ user.fullname }},</h1>
         <p>Here are items in your eventful moment bucket.</p>
       </div>
       <router-link to="/create-event">
@@ -14,8 +14,8 @@
     <div class="my-8 grid lg:grid-cols-2 gap-10">
       <!-- card -->
         <div v-for="moment in moments" :key="moment.id" class="shadow p-5 rounded hover:bg-active">
-            <h4 class="font-bold text-base mb-1 leading-5">{{ moment.title }}</h4>
-            <p class="mb-1 text-sm">{{ moment.details }}</p>
+            <h4 class="font-bold text-base mb-4">{{ moment.title }}</h4>
+            <p class="mb-1 details text-sm leading-7">{{ moment.details }}</p>
             <div class="mt-4 flex items-center justify-between">
               <router-link class="grow" :to="{ name: 'Event', params: { id: moment._id } }">
                 <small class="text-secondary">View Details</small>
@@ -31,6 +31,7 @@
     </div>
   </div>
 </div>
+  <h2 v-if="!user">Please loin to view moments</h2>
 </template>
 
 <script>
@@ -52,10 +53,18 @@ export default {
     this.moments = data.moments
 
     this.$store.dispatch('user', data)
-    this.authIsReady = this.$store.state.authIsReady 
+    this.authIsReady = this.$store.state.authIsReady
   },
   computed: {
     ...mapGetters(['user'])
   },
 }
 </script>
+<style>
+.details {
+  display: -webkit-box;
+  -webkit-line-clamp: 6; 
+  -webkit-box-orient: vertical; 
+  overflow: hidden;
+}
+</style>
