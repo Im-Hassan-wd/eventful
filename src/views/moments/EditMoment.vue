@@ -2,7 +2,8 @@
   <form @submit.prevent="handleEdit" class="max-w-md mt-8 min-[100px]:px-4 md:px-16 mb-24" >
     <div class="mb-4">
       <label class="text-sm block">Date in the future</label>
-      <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="futureDate" required />
+      <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="futureDate" required placeholder="MM-DD-YYY" />
+      <Error :error="error" />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Title</label>
@@ -21,15 +22,18 @@
 
 <script>
 import axios from 'axios'
+import Error from '../../components/Error'
 
 export default {
   name: 'EditEvent',
+  components: { Error },
   data() {
     return {
       futureDate: '',
       title: '',
       details: '',
-      id: ''
+      id: '',
+      error: null
     }
   },
   async created() {
@@ -53,7 +57,8 @@ export default {
       })
         this.$router.push(`/moment/${this.id}`)
       } catch(err) {
-      console.log('An error occurred!')
+        this.error = 'must be a valid date'
+        console.log(this.error)
       }
 
 
