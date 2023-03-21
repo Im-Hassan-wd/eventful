@@ -5,6 +5,7 @@
     <p class="my-12 text-sm leading-7">
      {{ moment.details }}
     </p>
+    <Error v-if="error" :error="error" />
     <div class="text-center my-16 mb-24 flex">
       <router-link :to="'/moment/'+ moment._id + '/edit'">
         <button class="btn bg-info mr-4">Edit</button>
@@ -18,13 +19,16 @@
 <script>
 import axios from 'axios'
 import { mapGetters } from 'vuex'
+import Error from '../../components/Error'
 
 export default {
   name: 'Event',
   props: ['id'],
+  components: { Error },
   data() {
     return {
-      moment: ''
+      moment: '',
+      error: null
     }
   },
   async created() {
@@ -39,9 +43,13 @@ export default {
   },
   methods:{
     async handleDelete() {
-      await axios.delete('moment/'+ this.id)
+      try {
+        await axios.delete('moment/'+ this.id)
 
-      this.$router.push('/')
+        this.$router.push('/')
+      } catch(err) {
+        this.error = 'Error deleting moment, try again'
+      }
     }
   },
   computed: {

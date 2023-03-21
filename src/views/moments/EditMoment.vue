@@ -3,7 +3,7 @@
     <div class="mb-4">
       <label class="text-sm block">Date in the future</label>
       <input class="border w-full sm:w-96 rounded-md p-1" type="text" v-model="futureDate" required placeholder="MM-DD-YYY" />
-      <Error :error="error" />
+      <Error v-if="error" :error="error" />
     </div>
     <div class="mb-4">
       <label class="text-sm block">Title</label>
