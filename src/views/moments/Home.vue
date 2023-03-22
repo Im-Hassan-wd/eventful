@@ -11,7 +11,7 @@
       </router-link>
     </div>
 
-    <div class="my-8 grid lg:grid-cols-2 gap-10 mb-24">
+    <div v-if="moments.length" class="my-8 grid lg:grid-cols-2 gap-10 mb-24">
       <!-- card -->
       <div v-for="moment in moments" :key="moment.id" class="flex flex-col shadow p-5 rounded hover:bg-active">
           <h4 class="font-bold text-base mb-4">{{ moment.title }}</h4>
@@ -26,17 +26,19 @@
       </div>
     </div>
 
+    <div v-else class="font-bold text-base mb-4">There is no item in your bucket</div>
+
     <div v-if="moments.length > 4" class="text-center mb-24">
       <button class="btn bg-secondary">Load More</button>
     </div>
   </div>
 </div>
-  <h2 v-if="!user">Please loin to view moments</h2>
+  <h2 v-if="!user" class="text-2xl text-gray-700 m-3">Please loin to view moments</h2>
 </template>
 
 <script>
 import axios from 'axios'
-
+import { watchEffect } from 'vue'
 import { mapGetters } from 'vuex'
 
 export default {
@@ -52,8 +54,13 @@ export default {
     const data =  response.data.data[0]
     this.moments = data.moments
 
-    this.$store.dispatch('user', data)
-    this.authIsReady = this.$store.state.authIsReady
+    if(data) {
+      this.$store.dispatch('user', data)
+      this.authIsReady = this.$store.state.authIsReady
+    } 
+    if (!data) {
+      this.$router.push('/login')
+    }
   },
   computed: {
     ...mapGetters(['user'])
