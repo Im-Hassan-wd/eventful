@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/moments/Home'
-import Login from '../views/Login'
-import Register from '../views/Register'
 import CreateMoment from '../views/moments/CreateMoment'
 import MomentDetails from '../views/moments/MomentDetails'
 import EditMoment from '../views/moments/EditMoment'
+import Register from '../views/Register'
+import Login from '../views/Login'
+import NotFound from '../views/NotFound'
 
 const routes = [
   {
@@ -39,6 +40,12 @@ const routes = [
     component: EditMoment,
     props: true
   },
+  // 404
+  {
+    path: '/:catchAll(.*)',
+    name: 'NotFound',
+    component: NotFound
+  }
 ]
 
 const router = createRouter({
